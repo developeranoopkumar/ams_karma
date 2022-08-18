@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\ReportController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,7 +25,8 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
-Route::get('submit-report', [EmployeeController::class, 'submitReports'])->name('submit-report');
+Route::get('submit-report', [ReportController::class, 'submitReports'])->name('submit-report');
+
 Route::get('review-performance', [EmployeeController::class, 'reviewPerformance'])->name('review-performance');
 Route::get('refer-task', [EmployeeController::class, 'referTask'])->name('refer-task');
 Route::get('suggest-changes', [EmployeeController::class, 'suggestChanges'])->name('suggest-changes');

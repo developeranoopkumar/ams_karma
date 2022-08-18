@@ -6,10 +6,7 @@ use Illuminate\Http\Request;
 
 class EmployeeController extends Controller
 {
-    public function submitReports()
-    {
-        return view('employee.submit_report');
-    }
+  
 
     public function reviewPerformance()
     {
